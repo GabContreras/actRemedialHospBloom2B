@@ -1,6 +1,6 @@
 /*
 Fields:
-name, email, password, birthDay, phone, isVerified
+name, email, password, birthday, phone, isVerified
 */
 
 import { Schema, model } from "mongoose";

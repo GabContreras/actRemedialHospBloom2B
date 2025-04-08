@@ -1,4 +1,4 @@
-//este archivo sirve para definir que metoos del cud va atener mi ruta /api/doctors/ 
+//este archivo sirve para definir que metoos del cud va atener mi ruta /api/patients/ 
 
 import express from "express";
 import patientsController from "../controllers/patientsController.js";

@@ -11,8 +11,8 @@ patientsController.getPatients = async (req, res) => {
 
 // INSERT
 patientsController.insertPatients = async (req, res) => {
-    const { name, email, password, birthDay, phone, isVerified } = req.body;
-    const newDoctor = new patientsModel({ name, email, password, birthDay, phone, isVerified });
+    const { name, email, password, birthday, phone, isVerified } = req.body;
+    const newDoctor = new patientsModel({ name, email, password, birthday, phone, isVerified });
     await newDoctor.save();
     res.json({ message: "Patient saved" });
 };
@@ -25,9 +25,9 @@ patientsController.deletePatients = async (req, res) => {
 
 // UPDATE
 patientsController.updatePatients = async (req, res) => {
-    const { name, email, password, birthDay, phone, isVerified } = req.body;
+    const { name, email, password, birthday, phone, isVerified } = req.body;
     const updateDoctors = await patientsModel.findByIdAndUpdate(req.params.id,
-        { name, email, password, birthDay, phone, isVerified }, { new: true });
+        { name, email, password, birthday, phone, isVerified }, { new: true });
     res.json({ message: "Patient updated successfully" });
 };
 
